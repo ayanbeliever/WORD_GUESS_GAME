@@ -108,15 +108,10 @@ word-guess-game/
    ```
 
 4. **Set up environment variables**:
-   ```bash
-   cp .env.example .env
-   ```
-   
-   Edit `.env` file with your configuration:
    ```env
-   MONGO_URI=mongodb://localhost:27017/word_guess_db
-   SECRET_KEY=your-secret-key-change-in-production
-   JWT_SECRET=jwt-secret-key-change-in-production
+   MONGO_URI=
+   SECRET_KEY=
+   JWT_SECRET=
    ```
 
 5. **Start MongoDB** (if running locally):
@@ -145,7 +140,7 @@ word-guess-game/
 
 3. **Start the development server**:
    ```bash
-   npm run dev
+   npm start
    ```
 
    The frontend will be available at `http://localhost:3000`
