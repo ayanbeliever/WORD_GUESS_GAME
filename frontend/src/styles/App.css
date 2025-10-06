@@ -55,6 +55,61 @@ body {
   gap: 2rem;
 }
 
+/* Landing Page */
+.home-landing .hero {
+  background: rgba(255,255,255,0.95);
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.home-landing .hero h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-centered { display: flex; flex-direction: column; align-items: center; }
+.hero-title { font-size: 3rem; font-weight: 800; letter-spacing: 0.5px; }
+.hero-subtitle { color: #555; max-width: 700px; }
+
+.home-landing .hero p {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+.home-landing .features { margin-bottom: 2rem; }
+.features-vertical { display: grid; grid-template-columns: 1fr; gap: 1rem; max-width: 1200px; margin: 0 auto; }
+.feature-card { width: 100%; }
+
+.home-landing .feature-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+}
+
+.home-landing .about {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 2px solid #e9ecef;
+}
+
+.home-landing .about h2 {
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.copyright-footer {
+  text-align: center;
+  color: #fff;
+  opacity: 0.9;
+  padding: 1rem 0;
+}
+
 .navbar-link {
   color: #333;
   text-decoration: none;

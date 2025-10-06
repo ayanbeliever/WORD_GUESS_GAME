@@ -159,15 +159,18 @@ const GameBoard = () => {
             </div>
           )}
           
-          {gameStatus.remaining_games > 0 && (
-            <button 
-              onClick={startNewGame} 
-              className="btn btn-primary"
-              disabled={loading}
-            >
-              Play Again
-            </button>
-          )}
+          <div style={{ display: 'flex', gap: '0.75rem', justifyContent: 'center', marginTop: '1rem' }}>
+            {gameStatus.remaining_games > 0 && (
+              <button 
+                onClick={startNewGame} 
+                className="btn btn-primary"
+                disabled={loading}
+              >
+                Play Again
+              </button>
+            )}
+            <a href="/" className="btn btn-secondary">Go Back</a>
+          </div>
         </div>
       </div>
     );

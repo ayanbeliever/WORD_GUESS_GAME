@@ -15,7 +15,7 @@ def create_app():
     app = Flask(__name__)
     
     # Enable CORS for frontend
-    CORS(app, origins=['http://localhost:3001'])
+    CORS(app, origins=['http://localhost:3000'])
     
     # Register blueprints
     app.register_blueprint(auth_bp, url_prefix='/api/auth')

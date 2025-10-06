@@ -31,6 +31,8 @@ api.interceptors.response.use(
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
       localStorage.removeItem('user');
+      // notify app about auth change
+      try { window.dispatchEvent(new Event('auth-changed')); } catch {}
       window.location.href = '/login';
     }
     return Promise.reject(error);
@@ -73,6 +75,7 @@ export const getAuthToken = () => {
 
 export const setUser = (user) => {
   localStorage.setItem('user', JSON.stringify(user));
+  try { window.dispatchEvent(new Event('auth-changed')); } catch {}
 };
 
 export const getUser = () => {
@@ -83,6 +86,7 @@ export const getUser = () => {
 export const clearAuth = () => {
   localStorage.removeItem('token');
   localStorage.removeItem('user');
+  try { window.dispatchEvent(new Event('auth-changed')); } catch {}
 };
 
 export default api;
