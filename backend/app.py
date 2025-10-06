@@ -1,6 +1,7 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 import logging
+import os
 from models import init_db, close_db
 from routes.auth import auth_bp
 from routes.game import game_bp
@@ -62,7 +63,8 @@ def main():
     
     try:
         logger.info("Starting Word Guess Game API server...")
-        app.run(host='0.0.0.0', port=5000, debug=True)
+        port = int(os.getenv('PORT', 5000))
+        app.run(host='0.0.0.0', port=port)
     except KeyboardInterrupt:
         logger.info("Shutting down server...")
     finally:
